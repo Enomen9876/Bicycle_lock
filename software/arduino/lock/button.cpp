@@ -8,21 +8,21 @@ int pressCount = 0;
 /*LED on BUTTON*/
 void setupLed()
 {
-  pinMode(PIN_LED_P, OUTPUT);
-  pinMode(PIN_LED_M, OUTPUT);
+  pinMode(PIN_LED_VCC, OUTPUT);
+  pinMode(PIN_LED_GND, OUTPUT);
 
-  digitalWrite(PIN_LED_M, LOW);
-  digitalWrite(PIN_LED_P, HIGH);
+  digitalWrite(PIN_LED_GND, LOW);
+  digitalWrite(PIN_LED_VCC, HIGH);
 }
 
 void turnLedOn()
 {
-digitalWrite(PIN_LED_P, HIGH);
+digitalWrite(PIN_LED_VCC, HIGH);
 }
 
 void turnLedOff()
 {
-digitalWrite(PIN_LED_P, LOW);
+digitalWrite(PIN_LED_VCC, LOW);
 }
 
 void fastBlink(int times) {
@@ -52,7 +52,7 @@ void setupSwitch()
 void turnSwitchOff()
 {
   digitalWrite(PIN_HOLD_GND, HIGH);
-  digitalWrite(PIN_LED_P, LOW);
+  digitalWrite(PIN_LED_VCC, LOW);
 }
 
 /*BUTTON controll*/
